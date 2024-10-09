@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { REST, Routes } from "discord.js";
 import dotenv from "dotenv";
 

@@ -10,7 +10,7 @@ export default [
   {
     rules: {
       "no-unused-vars": "warn",
-      // "no-console": "warn",
+      "no-console": "warn",
       "prefer-const": "error",
       "no-var": "error",
       eqeqeq: ["error", "always"],

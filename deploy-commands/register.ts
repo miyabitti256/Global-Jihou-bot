@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import dotenv from "dotenv";
 import { REST, Routes, type APIApplicationCommand } from "discord.js";
 import { readdirSync } from "fs";

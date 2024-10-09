@@ -46,7 +46,7 @@ for (const file of commandFiles) {
   if (command && command.data) {
     collection.set(command.data.name, command);
   } else {
-    console.error(`Error: ${file} does not export a 'data' property.`);
+    logger.error(`Error: ${file} does not export a 'data' property.`);
   }
 }
 
@@ -60,9 +60,8 @@ client.on("guildCreate", async (guild) => {
         joinedAt: new Date(),
       },
     });
-    console.log("Guild created successfully");
   } catch (error) {
-    console.error("Error creating guild:", error);
+    logger.error("Error creating guild:", error);
   }
   //サーバーに参加したらぬべ吉とヌベキチ└(՞ةڼ◔)」という名前のロールがあるか確認してロールをサーバーに追加
   const role = guild.roles.cache.find((role) => role.name === "ぬべ吉");
@@ -91,9 +90,8 @@ client.on("guildDelete", async (guild) => {
         id: guild.id,
       },
     });
-    console.log("Guild deleted successfully");
   } catch (error) {
-    console.error("Error deleting guild:", error);
+    logger.error("Error deleting guild:", error);
   }
 });
 

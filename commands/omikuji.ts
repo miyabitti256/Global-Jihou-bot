@@ -36,7 +36,6 @@ export async function execute(interaction: CommandInteraction) {
   if (!lastDrawDate || !isSameDay(currentDate, lastDrawDate)) {
     await interaction.deferReply();
     const result = drawOmikuji();
-    console.log(result);
 
     await prisma.user.update({
       where: { id: interaction.user.id },
