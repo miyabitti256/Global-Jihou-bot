@@ -138,7 +138,7 @@ client.on("interactionCreate", async (interaction) => {
 
   try {
     await command.execute(interaction);
-    logger.info(`${interaction.commandName}が実行されました。`);
+    logger.info(`${interaction.guild?.name}で${interaction.commandName}が実行されました。`);
   } catch (error) {
     logger.error(error);
     await interaction.reply({
